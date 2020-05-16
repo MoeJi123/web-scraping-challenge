@@ -18,7 +18,7 @@
     </div>
     <h2>Latest Mars News</h2>
     <h3>{{ data.news_title }}</h3>
-    <p>Min Temp: {{ data.news }}</p>
+    <p>{{ data.news_p }}</p>
   </div>
   </div>
 
@@ -26,13 +26,13 @@
     <div class="row">
         <div class="col-8">
             <h2>Featured Mars News</h2>
-            <img src = {{ data.image_url }} />
+            <img src = {{ data.featured_image_url }} />
         </div>
         <div class="col-4">
             <div class="row">
                 <div class="col">
                     <h3>Current Weather on Mars</h3>
-                    <p> {{ data.weather }} </p>
+                    <p> {{ data.mars_weather }} </p>
                 </div>
             </div class="row">
                 <div class="col">
