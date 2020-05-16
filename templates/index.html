@@ -5,23 +5,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Costa Rica Weather</title>
+  <title>Mission to Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/style.css">
 </head>
 
 <body>
   <div class="container-fluid">
     <div class="jumbotron text-center">
-      <h1>Visit the...</h1>
-      <p>Beach. Rainforest. Volcano. Tree House. Sloths.</p>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
-    <img src="{{ vacation.sloth_img }}" alt="Sloth">
-    <h2>The typical weather in Costa Rica is:</h2>
-    <h3>Max Temp: {{ vacation.max_temp }}</h3>
-    <h3>Min Temp: {{ vacation.min_temp }}</h3>
+    <h2>Latest Mars News</h2>
+    <h3>{{ data.news_title }}</h3>
+    <p>Min Temp: {{ data.news }}</p>
   </div>
   </div>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-8">
+            <h2>Featured Mars News</h2>
+            <img src = {{ data.image_url }} />
+        </div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col">
+                    <h3>Current Weather on Mars</h3>
+                    <p> {{ data.weather }} </p>
+                </div>
+            </div class="row">
+                <div class="col">
+                    <h3> Mars Facts </h3>
+                    <p> {{ data.html_table }} </p>
+                </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container">
+      <h2>Mars Hemispheres</h2>
+      <div>
+        <div class="row">
+            <div class="col">
+            
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="w-100"></div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+      </div>
+  </div>
+
+
 </body>
 
 </html>

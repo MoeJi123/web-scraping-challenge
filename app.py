@@ -8,11 +8,12 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
 
 @app.route('/')
 def home():
-        # Find one record of data from the mongo database
-    destination_data = mongo.db.collection.find_one()
+    
+    # Find one record of data from the mongo database
+    mars_data = mongo.db.collection.find_one()
 
     # Return template and data
-    return render_template("index.html", vacation=destination_data)
+    return render_template("index.html", data=mars_data)
 
 
 
