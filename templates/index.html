@@ -16,29 +16,30 @@
       <h1>Mission to Mars</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
-    <h2>Latest Mars News</h2>
-    <h3>{{ data.news_title }}</h3>
-    <p>{{ data.news_p }}</p>
+    <h3>Latest Mars News</h3>
+    <h4>{{ data.news_title }}</h4>
+    <p>{{ data.news }}</p>
   </div>
   </div>
 
   <div class="container">
     <div class="row">
-        <div class="col-8">
+        <div class="col-6">
             <h2>Featured Mars News</h2>
-            <img src = {{ data.featured_image_url }} />
+            <img id = "feature_image" src = {{ data.image_url }} />
         </div>
         <div class="col-4">
             <div class="row">
                 <div class="col">
                     <h3>Current Weather on Mars</h3>
-                    <p> {{ data.mars_weather }} </p>
+                    <p> {{ data.weather }} </p>
                 </div>
             </div class="row">
                 <div class="col">
                     <h3> Mars Facts </h3>
-                    <p> {{ data.html_table }} </p>
+                    <p> {{ data.facts }} </p>
                 </div>
+           </div>
         </div>
     </div>
   </div>
@@ -46,23 +47,16 @@
   <div class="container">
       <h2>Mars Hemispheres</h2>
       <div>
-        <div class="row">
-            <div class="col">
-            
-            </div>
-            <div class="col">
-
-            </div>
-            <div class="w-100"></div>
-            <div class="col">
-
-            </div>
-            <div class="col">
-
-            </div>
-        </div>
+        <!-- <div class = "row"> -->
+          {% for i in data.hemispheres %}
+            <div class="col-lg-6"> 
+              <img id = "hem_img" src = {{ i.img_url }} />
+              <h4>{{ i.title }} Enhanced</h4>         
+          {% endfor %}
+        <!-- </div> -->
       </div>
-  </div>
+
+
 
 
 </body>
