@@ -57,6 +57,7 @@ def scrape():
     df = tables[1]
     df = df.iloc[:, [0,1]]
     df.columns = ["Facts","Value"]
+    df.set_index('Facts', inplace=True)
     html_table = df.to_html()
     html_table = html_table.replace('\n', '')    
 
