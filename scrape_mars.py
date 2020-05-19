@@ -54,8 +54,7 @@ def scrape():
     fact_url = "http://space-facts.com/mars/"
 
     tables = pd.read_html(fact_url)
-    df = tables[1]
-    df = df.iloc[:, [0,1]]
+    df = tables[2]
     df.columns = ["Facts","Value"]
     df.set_index('Facts', inplace=True)
     html_table = df.to_html()
