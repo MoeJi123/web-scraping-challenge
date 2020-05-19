@@ -1,10 +1,7 @@
-#feature_image {
-    max-width: 100%;
+#facts_table > table {
+   font-size: 12px; 
 }
 
-.hem_image {
-    max-width: 100%;
-    /* margin-right: 30px;
-    margin-bottom: 30px;
-    padding-right: 50px; */
+#facts_table > table > thead > tr > th {
+    text-align: left;
 }
